@@ -1,0 +1,207 @@
+@font-face { 
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/circular-std/CircularStd-Book.woff2') format('woff2'),
+         url('/assets/fonts/circular-std/CircularStd-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/circular-std/CircularStd-BookItalic.woff2') format('woff2'),
+         url('/assets/fonts/circular-std/CircularStd-BookItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/circular-std/CircularStd-Medium.woff2') format('woff2'),
+         url('/assets/fonts/circular-std/CircularStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/circular-std/CircularStd-MediumItalic.woff2') format('woff2'),
+         url('/assets/fonts/circular-std/CircularStd-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/circular-std/CircularStd-Bold.woff2') format('woff2'),
+         url('/assets/fonts/circular-std/CircularStd-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/circular-std/CircularStd-BoldItalic.woff2') format('woff2'),
+         url('/assets/fonts/circular-std/CircularStd-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/circular-std/CircularStd-Black.woff2') format('woff2'),
+         url('/assets/fonts/circular-std/CircularStd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/circular-std/CircularStd-BlackItalic.woff2') format('woff2'),
+         url('/assets/fonts/circular-std/CircularStd-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+:root {
+    --blue: rgb(48, 48, 212);
+    --h1-size: calc(0.6vw + 0.6vh);
+    --grey: rgb(220, 220, 220);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'CircularStd';
+    list-style: none;
+}
+h2, #container-simulacao-estilo h2{
+    font-size: calc(1vw + 1vh);
+}
+
+header {
+    background-color: var(--blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    font-size: var(--h1-size);
+}
+
+main {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 3vw;
+    margin-top: 2.5vh;
+}
+
+form {
+    height: 80vh;
+    background-color: var(--grey);
+    width: 40vw;
+    border-radius: calc(1vw + 1vw);
+    padding: calc(0.9vw + 0.9vh);
+}
+
+#container-simulacao-estilo {
+    height: 80vh;
+    background-color: var(--grey);
+    width: 40vw;
+    border-radius: calc(1vw + 1vw);
+    padding: calc(0.9vw + 0.9vh);
+    line-height: 4.2vh;
+}
+
+hr {
+    width: 15vw;
+    border: calc(0.10vw + 0.10vh) solid var(--blue);
+    border-radius: 3vw;
+    margin-bottom: 1.2vh;
+}
+
+fieldset {
+    border: calc(0.10vw + 0.10vh) solid var(--blue);
+    border-radius: calc(0.5vw + 0.5vh);
+    background-color: white;
+    color: blue;
+}
+fieldset legend, label{
+    color: black;
+    font-size: 1.3vw;
+}
+fieldset legend{
+    font-size: 1.5vw;
+}
+#container-simulacao-estilo *{
+    font-size: calc(0.8vw + 0.8vh);
+}
+span{
+    color: blue;
+    font-weight: 400;
+}
+#container-main{
+    background-color: white;
+    height: 71vh;
+    padding: calc(0.5vw + 0.5vh);
+    border-radius: 1vw;
+    padding-left: calc(1vw + 1vh);
+}
+#container-simulacao-estilo section h1{
+    font-size: calc(1vw + 1vh);
+}
+#container-simulacao-estilo section h2, #container-simulacao-estilo h2{
+    font-size: calc(0.85vw + 0.85vh);
+}
+hr + fieldset{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding-left: 2vw;
+    margin-top: 3vh;
+}
+[type="color"]{
+    width: 2vw;
+    height: 4vh;
+}
+fieldset + fieldset{
+    height: 20vh;
+    margin-top: 3vh;
+}
+fieldset + fieldset ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vw;
+    padding-top: 5vh;
+}
+fieldset + fieldset select{
+    width: 10vw;
+    height: 5vh;
+    font-size: calc(0.8vw + 0.8vh);
+    border-radius: 2vw;
+    padding-left: 1vw;
+}
+#container-simulacao-comando{
+    background-color: rgba(0, 0, 0, 0.818);
+    color: white;
+    border-radius: 1vw;
+    padding: 1vw;
+    margin-top: 3vh;
+    border: calc(0.10vw + 0.10vh) solid var(--blue);
+    font-size:  calc(1vw + 1vh);
+}
+#btn-simular{
+    width: 40vw;
+    color: white;
+    background-color: blue;
+    border: none;
+    font-size: calc(1vw + 1vh);
+    height: 8vh;
+    border-radius: 1vw;
+    margin-top: 4vh;
+}
+#btn-simular:hover{
+    background-color: rgb(28, 28, 172);
+}

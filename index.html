@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Simulador</title>
+</head>
+<body>
+    <header>
+        <h1>Simulador de seletores e combinadores CSS</h1>
+    </header>
+    <main>
+        <form>
+            <h2>Configurações</h2>
+            <hr>
+            <fieldset>
+                <legend>Cor de Fundo</legend>
+                <label for="color">Escolha a cor:</label>
+                <input type="color" id="color" name="color" value="#1572B6">
+            </fieldset>
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="tag-p">Tag Principal</label>
+                        <select id="tag-p" name="tag-p">
+                            <option value="null">Nenhuma</option>
+                            <option value="div">div</option>
+                            <option value="section">section</option>
+                            <option value="ul">ul</option>
+                            <option value="li">li</option>
+                            <option value="h1">h1</option>
+                            <option value="h2">h2</option>
+                            <option value="p">p</option>
+                            <option value="ul">ul</option>
+                            <option value="body">body</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="combinador">Combinador</label>
+                        <select id="combinador" name="combinador">
+                            <option value="null">Nenhum</option>
+                            <option value=" ">(espaço) descendente</option>
+                            <option value=">">&gt; filho direto</option>
+                            <option value="+">+ irmão adjacente</option>
+                            <option value="~">~ irmão geral</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="tag-s">Tag Secundária</label>
+                        <select id="tag-s" name="tag-s">
+                            <option value="null">Nenhuma</option>
+                            <option value="div">div</option>
+                            <option value="section">section</option>
+                            <option value="ul">ul</option>
+                            <option value="li">li</option>
+                            <option value="h1">h1</option>
+                            <option value="h2">h2</option>
+                            <option value="p">p</option>
+                            <option value="ul">ul</option>
+                            <option value="body">body</option>
+                        </select>
+                    </li>
+                </ul>
+            </fieldset>
+            <div id="container-simulacao-comando">
+                <h3>Código CSS Gerado:</h3>
+                <code id="codigo-css-gerado">
+                    div {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1572B6;<br>
+                    }
+                </code>
+            </div>
+        </form>
+        
+        <div id="container-simulacao-estilo">
+            <h2>Preview HTML</h2>
+            <hr>
+            <div id="container-main">
+                <span class="tag">&lt;body&gt;</span>
+                <div class="container">
+                    <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</span>
+                    <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span> Parágrafo dentro do div <span class="tag">&lt;/p&gt;</span></p>
+                    <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                </div>
+                <section>
+                    <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;</span>
+                    <h1><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;</span> Título de exemplo <span class="tag">&lt;/h1&gt;</span></h1>
+                    <h2><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;</span> Subtítulo do artigo <span class="tag">&lt;/h2&gt;</span></h2>
+                    <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span> Parágrafo do artigo <span class="tag">&lt;/p&gt;</span></p>
+                    <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;</span>
+                </section>
+
+                <nav>
+                    <ul>
+                        <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</span>
+                        <li><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;</span> Item de navegação 1 <span class="tag">&lt;/li&gt;</span></li>
+                        <li><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;</span> Item de navegação 2 <span class="tag">&lt;/li&gt;</span></li>
+                        <li><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;</span> Item de navegação 3 <span class="tag">&lt;/li&gt;</span></li>
+                        <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</span>
+                    </ul>
+                </nav>
+
+                <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span> Parágrafo após a navegação <span class="tag">&lt;/p&gt;</span></p>
+
+                <h2><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;</span> Título H2 no final <span class="tag">&lt;/h2&gt;</span></h2>
+                <span class="tag">&lt;/body&gt;</span>
+            </div>
+        </div> 
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
