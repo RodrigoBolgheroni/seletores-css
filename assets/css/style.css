@@ -319,15 +319,14 @@ fieldset + fieldset select{
     }
 }
 
-/* ===== Correções específicas pro segundo fieldset ===== */
 fieldset + fieldset {
-    height: auto !important;         /* permite crescer */
+    height: auto !important;         
     margin-top: 3vh;
     padding: 1rem;
     box-sizing: border-box;
   }
   
-  /* permite os itens quebrarem em múltiplas linhas */
+
   fieldset + fieldset ul {
     display: flex;
     flex-wrap: wrap;
@@ -337,7 +336,6 @@ fieldset + fieldset {
     justify-content: flex-start;
   }
   
-  /* cada li fica responsivo: cresce, encolhe e tem um tamanho base */
   fieldset + fieldset ul li {
     flex: 1 1 30%;
     min-width: 160px;
@@ -346,7 +344,7 @@ fieldset + fieldset {
     gap: .5rem;
   }
   
-  /* selects e labels ocupam o espaço do li (ajusta em telas pequenas) */
+
   fieldset + fieldset select,
   fieldset + fieldset label {
     width: 100%;
@@ -354,7 +352,6 @@ fieldset + fieldset {
     box-sizing: border-box;
   }
   
-  /* ajusta a linha anterior (hr + fieldset) que antes forçava altura */
   hr + fieldset {
     height: auto;
     display: flex;
@@ -364,7 +361,7 @@ fieldset + fieldset {
     padding-top: 1rem;
   }
   
-  /* ===== Breakpoints ===== */
+
   @media (max-width: 1024px) {
     fieldset + fieldset ul li {
       flex: 1 1 45%;
