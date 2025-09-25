@@ -318,3 +318,83 @@ fieldset + fieldset select{
         font-size: calc(3vw + 1vh);
     }
 }
+
+/* ===== Correções específicas pro segundo fieldset ===== */
+fieldset + fieldset {
+    height: auto !important;         /* permite crescer */
+    margin-top: 3vh;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* permite os itens quebrarem em múltiplas linhas */
+  fieldset + fieldset ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  /* cada li fica responsivo: cresce, encolhe e tem um tamanho base */
+  fieldset + fieldset ul li {
+    flex: 1 1 30%;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  
+  /* selects e labels ocupam o espaço do li (ajusta em telas pequenas) */
+  fieldset + fieldset select,
+  fieldset + fieldset label {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* ajusta a linha anterior (hr + fieldset) que antes forçava altura */
+  hr + fieldset {
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+  }
+  
+  /* ===== Breakpoints ===== */
+  @media (max-width: 1024px) {
+    fieldset + fieldset ul li {
+      flex: 1 1 45%;
+      min-width: 140px;
+    }
+    fieldset + fieldset select {
+      font-size: calc(1vw + 1vh);
+    }
+    [type="color"] {
+      width: 6vw;
+      height: 5vh;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    fieldset + fieldset ul {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    fieldset + fieldset ul li {
+      flex-basis: 100%;
+      min-width: 0;
+    }
+    fieldset + fieldset select {
+      width: 100%;
+      height: 48px;
+    }
+    [type="color"] {
+      width: 12vw;
+      height: 6vh;
+    }
+  }
+  
