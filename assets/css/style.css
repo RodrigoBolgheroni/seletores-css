@@ -205,3 +205,116 @@ fieldset + fieldset select{
 #btn-simular:hover{
     background-color: rgb(28, 28, 172);
 }
+/* ========= RESPONSIVIDADE ========= */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    form, 
+    #container-simulacao-estilo {
+        width: 85vw;
+        height: auto;
+    }
+
+    hr {
+        width: 40vw;
+    }
+
+    fieldset legend, label {
+        font-size: calc(1.5vw + 1vh);
+    }
+
+    fieldset + fieldset select {
+        width: 40vw;
+        font-size: calc(1vw + 1vh);
+    }
+
+    [type="color"] {
+        width: 8vw;
+        height: 5vh;
+    }
+
+    #container-main {
+        height: auto;
+    }
+
+    #btn-simular {
+        width: 85vw;
+        height: 7vh;
+        font-size: calc(1vw + 1vh);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 2vh;
+        text-align: center;
+        font-size: calc(2vw + 1vh);
+    }
+
+    form, 
+    #container-simulacao-estilo {
+        width: 90vw;
+        padding: 4vw;
+    }
+
+    hr {
+        width: 60vw;
+    }
+
+    fieldset legend, label {
+        font-size: calc(2vw + 1vh);
+    }
+
+    fieldset + fieldset select {
+        width: 60vw;
+        height: 6vh;
+        font-size: calc(2vw + 1vh);
+    }
+
+    [type="color"] {
+        width: 12vw;
+        height: 6vh;
+    }
+
+    #btn-simular {
+        width: 90vw;
+        height: 8vh;
+        font-size: calc(2vw + 1vh);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: calc(4vw + 1vh);
+    }
+
+    form, 
+    #container-simulacao-estilo {
+        width: 95vw;
+        padding: 5vw;
+    }
+
+    hr {
+        width: 70vw;
+    }
+
+    fieldset legend, label {
+        font-size: calc(3vw + 1vh);
+    }
+
+    fieldset + fieldset select {
+        width: 70vw;
+        height: 6vh;
+        font-size: calc(3vw + 1vh);
+    }
+
+    #btn-simular {
+        width: 95vw;
+        height: 8vh;
+        font-size: calc(3vw + 1vh);
+    }
+}
